@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Accessibility</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -26,6 +26,8 @@
 			<div class="slides">
 				<section>
 					<h1>Accessibility</h1>
+					<h6>essential for people with disabilities</h6>
+					<h6>useful for all</h6>
 				</section>
 				<section>
 					Why do we care?
@@ -51,16 +53,22 @@
 					<h1>Kinds of Disabilities</h1>
 				</section>
 				<section>
+					<h2>People with chronic conditions (RSI)</h2>
+				</section>
+				<section>
 					<h2>Motor impaired users</h2>
-					<img src="images/optima-joystick2.jpg" />
+					<img width="700" src="images/optima-joystick2.jpg" />
+				</section>
+				<section>
+					<h2>People with Low Vision</h2>
 				</section>
 				<section>
 					<h2>Blind users</h2>
-					<img src="images/voiceover.gif" />
+					<img width="700" src="images/braille.png" />
 				</section>
 				<section>
 					<h2>No Mouse</h2>
-					<img src="images/nomouse.jpg" />
+					<img width="700" src="images/nomouse.jpg" />
 				</section>
 				<section>
 					<h2>Building Blocks of Accessible Web Apps</h2>
@@ -93,7 +101,9 @@
 					<pre><code data-trim>
 						<body>
 							<form action="">
+								<label>Email</label>
 								<input type="email" name="email" />
+								<label>Password</label>
 								<input type="password" name="password" />
 								<span class="btn btn-default">Submit</span>
 								<span class="btn btn-default">Cancel</span>
@@ -118,18 +128,33 @@
 				</section>
 				<section>
 					<h2>Focus Management</h2>
-					<a target="blank" href="examples/usability-demos/fake-button/index.html">Bad Demo</a>
-					<a target="blank" href="examples/usability-demos/forms/index.html">Ok Demo</a>
-					<pre><code data-trim>
-						<body>
-							<form action="">
-								<input type="email" name="email" />
-								<input type="password" name="password" />
-								<button class="btn btn-default">Submit</button>
-								<button class="btn btn-default">Cancel</button>
-							</form>
-						</body>
-					</code></pre>
+					<section>
+						<h6>tabindex</h6>
+						<pre><code data-trim>
+							<body>
+								<!-- Natural tab order -->
+								<div tabindex="0">Clicky 1</div>
+								
+								<!-- Custom tab order -->
+								<div tabindex="5">Clicky 1</div>
+								
+								<!-- Focusable through scripting but not in tab order.
+								Useful for hiding focusable controls from sighted users
+								and keyboard-only users -->
+								<div tabindex="-1">Clicky 1</div>
+							</body>
+						</code></pre>
+					</section>
+					<section>
+						<h6>Proactive Focus</h6>
+						<pre><code data-trim><body>element.focus()</body></code></pre>
+						Proactively place focus with to create an efficient workflow
+					</section>
+					<section>
+						Do not drop focus on the floor
+						<br />
+						<a target="blank" href="examples/usability-demos/drop-focus/index.html">Example</a>
+					</section>
 				</section>
 				<section>
 					<h2>WAI-ARIA</h2>
@@ -152,6 +177,7 @@
 						<li><a href="https://www.w3.org/TR/wai-aria-practices/#aria_ex">Keyboard Recommendations: https://www.w3.org/TR/wai-aria-practices/#aria_ex</a></li>
 						<li><a href="https://www.wuhcag.com/wcag-checklist/">WCAG 2.0 Checklist: https://www.wuhcag.com/wcag-checklist/</a></li>
 						<li><a href="http://wave.webaim.org/">WAVE: http://wave.webaim.org/</a></li>
+						<li><a href="https://www.w3.org/WAI/perspectives/keyboard.html">WAI Perspectives: Keyboard</a></li>
 					</ul>
 				</section>
 				<section>
