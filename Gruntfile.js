@@ -1,5 +1,6 @@
 /* global module:false */
 module.exports = function(grunt) {
+	grunt.loadNpmTasks('grunt-gh-pages');
 	var port = grunt.option('port') || 8000;
 	var root = grunt.option('root') || '.';
 
@@ -17,6 +18,13 @@ module.exports = function(grunt) {
 				' *\n' +
 				' * Copyright (C) 2017 Hakim El Hattab, http://hakim.se\n' +
 				' */'
+		},
+
+		'gh-pages': {
+			options: {
+				base: '.'
+			},
+    	src: ['**']
 		},
 
 		qunit: {
