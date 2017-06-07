@@ -78,31 +78,79 @@
 				<section>
 					<h2>DOM Order</h2>
 					<section>
-						<a target="blank" href="examples/usability-demos/content-order/index.html">Open Demo</a>
+						<h6>Bad</h6>
 						<pre><code data-trim>
 							<body>
-								<p class="content" tabindex="0">
-									Lorem ipsum dolor sit amet...
+								<p id="content">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis quod esse,
+									accusamus officiis fugit, delectus consectetur suscipit repudiandae error
+									nam ex eveniet animi non minima quasi, culpa cupiditate dolorum asperiores.
 								</p>
-								<h1 class="title" tabindex="0">
-									This is the title
-								</h1>
+								<h1 id="title">This is the title</h1>
 								<nav>
 									<ul>
-										<li><a href="#" class="">Nav 1</a></li>
-										<li><a href="#" class="">Nav 2</a></li>
-										<li><a href="#" class="">Nav 3</a></li>
-										<li><a href="#" class="">Nav 4</a></li>
+									<li><a href="#" class="">Nav 1</a></li>
+									<li><a href="#" class="">Nav 2</a></li>
+									<li><a href="#" class="">Nav 3</a></li>
+									<li><a href="#" class="">Nav 4</a></li>
 									</ul>
 								</nav>
 							</body>
 						</code></pre>
+						<a target="blank" href="examples/usability-demos/content-order/bad.html">Open Demo</a>
+					</section>
+					<section>
+						<h6>Better</h6>
+						<pre><code data-trim>
+							<body>
+								<nav>
+									<ul>
+									<li><a href="#">Nav 1</a></li>
+									<li><a href="#">Nav 2</a></li>
+									<li><a href="#">Nav 3</a></li>
+									<li><a href="#">Nav 4</a></li>
+									</ul>
+								</nav>
+								<h1 id="title">This is the title</h1>
+								<p id="content">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis quod esse,
+									accusamus officiis fugit, delectus consectetur suscipit repudiandae error
+									nam ex eveniet animi non minima quasi, culpa cupiditate dolorum asperiores.
+								</p>
+							</body>
+						</code></pre>
+						<a target="blank" href="examples/usability-demos/content-order/better.html">Open Demo</a>
+					</section>
+					<section>
+						<h6>Great</h6>
+						<pre><code data-trim>
+							<body>
+								<nav aria-labelledby="navlabel" tabindex="0">
+									<h2 id="navlabel">Navigation Menu</h2>
+									<ul role="menu" aria-labelledby="navheading">
+									<li><a role="menuitem" href="#">Nav 1</a></li>
+									<li><a role="menuitem" href="#">Nav 2</a></li>
+									<li><a role="menuitem" href="#">Nav 3</a></li>
+									<li><a role="menuitem" href="#">Nav 4</a></li>
+									</ul>
+								</nav>
+								<div role="main" aria-labelledby="contentlabel">
+									<h2 id="contentlabel">Articles</h2>
+									<h1 id="title" aria-label="Article Title">This is the title</h1>
+									<p id="content" aria-label="Article Content">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis quod esse,
+									accusamus officiis fugit, delectus consectetur suscipit repudiandae error
+									nam ex eveniet animi non minima quasi, culpa cupiditate dolorum asperiores.
+									</p>
+								</div>
+							</body>
+						</code></pre>
+						<a target="blank" href="examples/usability-demos/content-order/great.html">Open Demo</a>
 					</section>
 				</section>
 				<section>
 					<h2>Interactive Controls</h2>
 					<section>
-						<a target="blank" href="examples/usability-demos/fake-button/index.html">Open Demo</a>
 						<pre><code data-trim>
 							<body>
 								<form action="">
@@ -115,6 +163,7 @@
 								</form>
 							</body>
 						</code></pre>
+						<a target="blank" href="examples/usability-demos/fake-button/index.html">Open Demo</a>
 					</section>
 				</section>
 				<section>
@@ -190,19 +239,21 @@
 				</section>
 				<section>
 					<h2>The Activity</h2>
-					<ul>
-						<li>Organize in pairs</li>
-						<li>Enable Voiceover (Mac users)</li>
-						<li>Turn off the screen - brightness down</li>
-						<li>
-							Try to accomplish some user journey on the product
-							you work on or on master.liferay.org.es 
-						</li>
-						<li>Take notes whenever you find a pain point</li>
-						<li>
-							Switch positions with your pair
-						</li>
-					</ul>
+					<section>
+						<ul>
+							<li>Organize in pairs</li>
+							<li>Enable Voiceover (Mac users)</li>
+							<li>Turn off the screen - brightness down</li>
+							<li>
+								Try to accomplish some user journey on the product
+								you work on or on master.liferay.org.es 
+							</li>
+							<li>Take notes whenever you find a pain point</li>
+							<li>
+								Switch positions with your pair
+							</li>
+						</ul>
+					</section>
 				</section>
 			</div>
 		</div>
