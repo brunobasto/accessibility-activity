@@ -20,6 +20,12 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<style>
+			section section h6.example {
+				text-align: left;
+				padding-left: 45px;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
@@ -76,9 +82,9 @@
 					<h2>Building Blocks of Accessible Web Apps</h2>
 				</section>
 				<section>
-					<h2>DOM Order</h2>
+					<h2>DOM Structure</h2>
 					<section>
-						<h6>Bad</h6>
+						<h6 class="example">Bad:</h6>
 						<pre><code data-trim>
 							<body>
 								<p id="content">
@@ -97,10 +103,10 @@
 								</nav>
 							</body>
 						</code></pre>
-						<a target="blank" href="examples/usability-demos/content-order/bad.html">Open Demo</a>
+						<a target="blank" href="examples/usability-demos/1-dom-structure/bad.html">Open Demo</a>
 					</section>
 					<section>
-						<h6>Better</h6>
+						<h6 class="example">Better:</h6>
 						<pre><code data-trim>
 							<body>
 								<nav>
@@ -119,10 +125,10 @@
 								</p>
 							</body>
 						</code></pre>
-						<a target="blank" href="examples/usability-demos/content-order/better.html">Open Demo</a>
+						<a target="blank" href="examples/usability-demos/1-dom-structure/better.html">Open Demo</a>
 					</section>
 					<section>
-						<h6>Great</h6>
+						<h6 class="example">Great:</h6>
 						<pre><code data-trim>
 							<body>
 								<nav aria-labelledby="navlabel" tabindex="0">
@@ -145,12 +151,13 @@
 								</div>
 							</body>
 						</code></pre>
-						<a target="blank" href="examples/usability-demos/content-order/great.html">Open Demo</a>
+						<a target="blank" href="examples/usability-demos/1-dom-structure/great.html">Open Demo</a>
 					</section>
 				</section>
 				<section>
 					<h2>Interactive Controls</h2>
 					<section>
+						<h6 class="example">Bad:</h6>
 						<pre><code data-trim>
 							<body>
 								<form action="">
@@ -163,24 +170,58 @@
 								</form>
 							</body>
 						</code></pre>
-						<a target="blank" href="examples/usability-demos/fake-button/index.html">Open Demo</a>
+						<a target="blank" href="examples/usability-demos/2-interactive-controls/bad.html">Open Demo</a>
+					</section>
+					<section>
+						<h6 class="example">Better:</h6>
+						<pre><code data-trim>
+							<body>
+								<form action="">
+									<label>Email</label>
+									<input type="email" name="email" />
+									<label>Password</label>
+									<input type="password" name="password" />
+									<button class="btn btn-default" type="submit">Submit</button>
+									<button class="btn btn-default" type="reset">Cancel</button>
+								</form>
+							</body>
+						</code></pre>
+						<a target="blank" href="examples/usability-demos/2-interactive-controls/better.html">Open Demo</a>
 					</section>
 				</section>
 				<section>
 					<h2>Labeling Form Controls and Images</h2>
 					<section>
-						<a target="blank" href="examples/usability-demos/fake-button/index.html">Bad Demo</a>
-						<a target="blank" href="examples/usability-demos/forms/index.html">Ok Demo</a>
+						<h6 class="example">Bad:</h6>
 						<pre><code data-trim>
 							<body>
 								<form action="">
+									<label>Email</label>
 									<input type="email" name="email" />
+									<label>Password</label>
 									<input type="password" name="password" />
-									<button class="btn btn-default">Submit</button>
-									<button class="btn btn-default">Cancel</button>
+									<button class="btn btn-default" type="submit">Submit</button>
+									<button class="btn btn-default" type="reset">Cancel</button>
 								</form>
 							</body>
 						</code></pre>
+						<a target="blank" href="examples/usability-demos/3-labelling/bad.html">Open Demo</a>
+					</section>
+					<section>
+						<h6 class="example">Better:</h6>
+						<pre><code data-trim>
+							<body>
+								<form action="">
+									<label for="email">Email</label>
+									<input id="email" type="email" name="email" />
+									<label for="password">Password</label>
+									<input id="password" type="password" name="password" />
+									<button class="btn btn-default" type="submit">Submit</button>
+									<button class="btn btn-default" type="reset">Cancel</button>
+								</form>
+							</body>
+						</code></pre>
+						<a target="blank" href="examples/usability-demos/3-labelling/bad.html">Open Demo</a>
 					</section>
 				</section>
 				<section>
@@ -189,23 +230,25 @@
 						<h6>tabindex</h6>
 						<pre><code data-trim>
 							<body>
-								<!-- Natural tab order -->
+								<!-- Natural tab order. It does not change the tab order,
+								but places the element in the logical navigation flow. -->
 								<div tabindex="0">Clicky 1</div>
-								
+
 								<!-- Custom tab order -->
 								<div tabindex="5">Clicky 1</div>
-								
+
 								<!-- Focusable through scripting but not in tab order.
 								Useful for hiding focusable controls from sighted users
 								and keyboard-only users -->
-								<div tabindex="-1">Clicky 1</div>
+								<div tabindex="-1">not Clicky 1</div>
 							</body>
 						</code></pre>
+						<a target="blank" href="examples/usability-demos/4-focus/tabindex.html">Open Demo</a>
 					</section>
 					<section>
 						<h6>Proactive Focus</h6>
 						<pre><code data-trim><body>element.focus()</body></code></pre>
-						Proactively place focus with to create an efficient workflow
+						Proactively place focus to create an efficient workflow
 					</section>
 					<section>
 						Do not drop focus on the floor
