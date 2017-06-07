@@ -39,15 +39,17 @@
 				</section>
 				<section>
 					<h4>Government regulations</h4>
-					<ul>
-						<li>Canada - Standard on Web Accessibility</li>
-						<li>Ireland – Disability Act 2005</li>
-						<li>Malta – The Foundation for Information Technology Accessibility</li>
-						<li>UK – Equality Act 2010</li>
-						<li>USA – Americans with Disabilities Act of 1990 (ADA)</li>
-						<li>USA – Section 508 of the Rehabilitation Act</li>
-						<li>Norway – Anti-Discrimination and Accessibility Act 2008</li>
-					</ul>
+					<section>
+						<ul>
+							<li>Canada - Standard on Web Accessibility</li>
+							<li>Ireland – Disability Act 2005</li>
+							<li>Malta – The Foundation for Information Technology Accessibility</li>
+							<li>UK – Equality Act 2010</li>
+							<li>USA – Americans with Disabilities Act of 1990 (ADA)</li>
+							<li>USA – Section 508 of the Rehabilitation Act</li>
+							<li>Norway – Anti-Discrimination and Accessibility Act 2008</li>
+						</ul>
+					</section>
 				</section>
 				<section>
 					<h1>Kinds of Disabilities</h1>
@@ -75,56 +77,62 @@
 				</section>
 				<section>
 					<h2>DOM Order</h2>
-					<a target="blank" href="examples/usability-demos/content-order/index.html">Open Demo</a>
-					<pre><code data-trim>
-						<body>
-							<p class="content" tabindex="0">
-								Lorem ipsum dolor sit amet...
-							</p>
-							<h1 class="title" tabindex="0">
-								This is the title
-							</h1>
-							<nav>
-								<ul>
-									<li><a href="#" class="">Nav 1</a></li>
-									<li><a href="#" class="">Nav 2</a></li>
-									<li><a href="#" class="">Nav 3</a></li>
-									<li><a href="#" class="">Nav 4</a></li>
-								</ul>
-							</nav>
-						</body>
-					</code></pre>
+					<section>
+						<a target="blank" href="examples/usability-demos/content-order/index.html">Open Demo</a>
+						<pre><code data-trim>
+							<body>
+								<p class="content" tabindex="0">
+									Lorem ipsum dolor sit amet...
+								</p>
+								<h1 class="title" tabindex="0">
+									This is the title
+								</h1>
+								<nav>
+									<ul>
+										<li><a href="#" class="">Nav 1</a></li>
+										<li><a href="#" class="">Nav 2</a></li>
+										<li><a href="#" class="">Nav 3</a></li>
+										<li><a href="#" class="">Nav 4</a></li>
+									</ul>
+								</nav>
+							</body>
+						</code></pre>
+					</section>
 				</section>
 				<section>
 					<h2>Interactive Controls</h2>
-					<a target="blank" href="examples/usability-demos/fake-button/index.html">Open Demo</a>
-					<pre><code data-trim>
-						<body>
-							<form action="">
-								<label>Email</label>
-								<input type="email" name="email" />
-								<label>Password</label>
-								<input type="password" name="password" />
-								<span class="btn btn-default">Submit</span>
-								<span class="btn btn-default">Cancel</span>
-							</form>
-						</body>
-					</code></pre>
+					<section>
+						<a target="blank" href="examples/usability-demos/fake-button/index.html">Open Demo</a>
+						<pre><code data-trim>
+							<body>
+								<form action="">
+									<label>Email</label>
+									<input type="email" name="email" />
+									<label>Password</label>
+									<input type="password" name="password" />
+									<span class="btn btn-default">Submit</span>
+									<span class="btn btn-default">Cancel</span>
+								</form>
+							</body>
+						</code></pre>
+					</section>
 				</section>
 				<section>
 					<h2>Labeling Form Controls and Images</h2>
-					<a target="blank" href="examples/usability-demos/fake-button/index.html">Bad Demo</a>
-					<a target="blank" href="examples/usability-demos/forms/index.html">Ok Demo</a>
-					<pre><code data-trim>
-						<body>
-							<form action="">
-								<input type="email" name="email" />
-								<input type="password" name="password" />
-								<button class="btn btn-default">Submit</button>
-								<button class="btn btn-default">Cancel</button>
-							</form>
-						</body>
-					</code></pre>
+					<section>
+						<a target="blank" href="examples/usability-demos/fake-button/index.html">Bad Demo</a>
+						<a target="blank" href="examples/usability-demos/forms/index.html">Ok Demo</a>
+						<pre><code data-trim>
+							<body>
+								<form action="">
+									<input type="email" name="email" />
+									<input type="password" name="password" />
+									<button class="btn btn-default">Submit</button>
+									<button class="btn btn-default">Cancel</button>
+								</form>
+							</body>
+						</code></pre>
+					</section>
 				</section>
 				<section>
 					<h2>Focus Management</h2>
@@ -158,27 +166,27 @@
 				</section>
 				<section>
 					<h2>WAI-ARIA</h2>
-					<a target="blank" href="examples/usability-demos/fake-button/index.html">Bad Demo</a>
-					<a target="blank" href="examples/usability-demos/forms/index.html">Ok Demo</a>
-					<pre><code data-trim>
-						<body>
-							<form action="">
-								<input type="email" name="email" />
-								<input type="password" name="password" />
-								<button class="btn btn-default">Submit</button>
-								<button class="btn btn-default">Cancel</button>
-							</form>
-						</body>
-					</code></pre>
+					<section>
+						<h6>aria-role</h6>
+						<pre><code data-trim><body>element.focus()</body></code></pre>
+						Proactively place focus with to create an efficient workflow
+					</section>
+					<section>
+						<h6>aria-labelledby</h6>
+						<pre><code data-trim><body>element.focus()</body></code></pre>
+						Proactively place focus with to create an efficient workflow
+					</section>
 				</section>
 				<section>
 					<h2>Resources</h2>
-					<ul>
-						<li><a href="https://www.w3.org/TR/wai-aria-practices/#aria_ex">Keyboard Recommendations: https://www.w3.org/TR/wai-aria-practices/#aria_ex</a></li>
-						<li><a href="https://www.wuhcag.com/wcag-checklist/">WCAG 2.0 Checklist: https://www.wuhcag.com/wcag-checklist/</a></li>
-						<li><a href="http://wave.webaim.org/">WAVE: http://wave.webaim.org/</a></li>
-						<li><a href="https://www.w3.org/WAI/perspectives/keyboard.html">WAI Perspectives: Keyboard</a></li>
-					</ul>
+					<section>
+						<ul>
+							<li><a href="https://www.w3.org/TR/wai-aria-practices/#aria_ex">Keyboard Recommendations: https://www.w3.org/TR/wai-aria-practices/#aria_ex</a></li>
+							<li><a href="https://www.wuhcag.com/wcag-checklist/">WCAG 2.0 Checklist: https://www.wuhcag.com/wcag-checklist/</a></li>
+							<li><a href="http://wave.webaim.org/">WAVE: http://wave.webaim.org/</a></li>
+							<li><a href="https://www.w3.org/WAI/perspectives/keyboard.html">WAI Perspectives: Keyboard</a></li>
+						</ul>
+					</section>
 				</section>
 				<section>
 					<h2>The Activity</h2>
