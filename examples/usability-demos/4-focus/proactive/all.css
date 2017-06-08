@@ -1,0 +1,4 @@
+.relative-target {
+  position: static; }
+  .relative-target .dropdown-menu {
+    bottom: auto; }

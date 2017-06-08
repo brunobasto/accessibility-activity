@@ -58,21 +58,36 @@
 					</section>
 				</section>
 				<section>
-					<h1>Kinds of Disabilities</h1>
+					<h4>It's part of our mission</h4>
+					To help others reach their full potential
 				</section>
 				<section>
 					<h2>People with chronic conditions (RSI)</h2>
 				</section>
 				<section>
 					<h2>Motor impaired users</h2>
-					<img width="700" src="images/optima-joystick2.jpg" />
+					<section>
+						<img width="700" src="images/optima-joystick2.jpg" />
+					</section>
+					<section>
+						<video width="700" controls>
+							<source src="images/motor_impaired.mp4" type="video/mp4">
+						</video>
+					</section>
 				</section>
 				<section>
 					<h2>People with Low Vision</h2>
 				</section>
 				<section>
 					<h2>Blind users</h2>
-					<img width="700" src="images/braille.png" />
+					<section>
+						<img width="700" src="images/braille.png" />
+					</section>
+					<section>
+						<video width="700" controls>
+							<source src="images/blinduser.mp4" type="video/mp4">
+						</video>
+					</section>
 				</section>
 				<section>
 					<h2>No Mouse</h2>
@@ -93,17 +108,15 @@
 									nam ex eveniet animi non minima quasi, culpa cupiditate dolorum asperiores.
 								</p>
 								<h1 id="title">This is the title</h1>
-								<nav>
-									<ul>
-									<li><a href="#" class="">Nav 1</a></li>
-									<li><a href="#" class="">Nav 2</a></li>
-									<li><a href="#" class="">Nav 3</a></li>
-									<li><a href="#" class="">Nav 4</a></li>
-									</ul>
-								</nav>
+								<div class="nav">
+									<span class="menuitem" onclick="...">Nav 1</span>
+									<span class="menuitem" onclick="...">Nav 2</span>
+									<span class="menuitem" onclick="...">Nav 3</span>
+									<span class="menuitem" onclick="...">Nav 4</span>
+								</div>
 							</body>
 						</code></pre>
-						<a target="blank" href="examples/usability-demos/1-dom-structure/bad.html">Open Demo</a>
+						<a target="blank" href="examples/usability-demos/1-dom-structure/bad.html">Open Example</a>
 					</section>
 					<section>
 						<h6 class="example">Better:</h6>
@@ -111,10 +124,10 @@
 							<body>
 								<nav>
 									<ul>
-									<li><a href="#">Nav 1</a></li>
-									<li><a href="#">Nav 2</a></li>
-									<li><a href="#">Nav 3</a></li>
-									<li><a href="#">Nav 4</a></li>
+										<li><a href="#">Nav 1</a></li>
+										<li><a href="#">Nav 2</a></li>
+										<li><a href="#">Nav 3</a></li>
+										<li><a href="#">Nav 4</a></li>
 									</ul>
 								</nav>
 								<h1 id="title">This is the title</h1>
@@ -125,19 +138,19 @@
 								</p>
 							</body>
 						</code></pre>
-						<a target="blank" href="examples/usability-demos/1-dom-structure/better.html">Open Demo</a>
+						<a target="blank" href="examples/usability-demos/1-dom-structure/better.html">Open Example</a>
 					</section>
 					<section>
-						<h6 class="example">Great:</h6>
+						<h6 class="example">Much better:</h6>
 						<pre><code data-trim>
 							<body>
 								<nav aria-labelledby="navlabel" tabindex="0">
 									<h2 id="navlabel">Navigation Menu</h2>
 									<ul role="menu" aria-labelledby="navheading">
-									<li><a role="menuitem" href="#">Nav 1</a></li>
-									<li><a role="menuitem" href="#">Nav 2</a></li>
-									<li><a role="menuitem" href="#">Nav 3</a></li>
-									<li><a role="menuitem" href="#">Nav 4</a></li>
+										<li><a role="menuitem" href="#">Nav 1</a></li>
+										<li><a role="menuitem" href="#">Nav 2</a></li>
+										<li><a role="menuitem" href="#">Nav 3</a></li>
+										<li><a role="menuitem" href="#">Nav 4</a></li>
 									</ul>
 								</nav>
 								<div role="main" aria-labelledby="contentlabel">
@@ -151,7 +164,7 @@
 								</div>
 							</body>
 						</code></pre>
-						<a target="blank" href="examples/usability-demos/1-dom-structure/great.html">Open Demo</a>
+						<a target="blank" href="examples/usability-demos/1-dom-structure/great.html">Open Example</a>
 					</section>
 				</section>
 				<section>
@@ -170,7 +183,7 @@
 								</form>
 							</body>
 						</code></pre>
-						<a target="blank" href="examples/usability-demos/2-interactive-controls/bad.html">Open Demo</a>
+						<a target="blank" href="examples/usability-demos/2-interactive-controls/bad.html">Open Example</a>
 					</section>
 					<section>
 						<h6 class="example">Better:</h6>
@@ -186,7 +199,7 @@
 								</form>
 							</body>
 						</code></pre>
-						<a target="blank" href="examples/usability-demos/2-interactive-controls/better.html">Open Demo</a>
+						<a target="blank" href="examples/usability-demos/2-interactive-controls/better.html">Open Example</a>
 					</section>
 				</section>
 				<section>
@@ -205,7 +218,7 @@
 								</form>
 							</body>
 						</code></pre>
-						<a target="blank" href="examples/usability-demos/3-labelling/bad.html">Open Demo</a>
+						<a target="blank" href="examples/usability-demos/3-labelling/bad.html">Open Example</a>
 					</section>
 					<section>
 						<h6 class="example">Better:</h6>
@@ -221,7 +234,18 @@
 								</form>
 							</body>
 						</code></pre>
-						<a target="blank" href="examples/usability-demos/3-labelling/bad.html">Open Demo</a>
+						<a target="blank" href="examples/usability-demos/3-labelling/better.html">Open Example</a>
+					</section>
+					<section>
+						<h8>All images should have the alt attribute</h8>
+						<ul>
+							<li>Important images should have descriptive alt attributes</li>
+							<li>
+								Decorative images should have a blank alt attribute otherwise
+								the screen reader will try to read the filename of the image.
+								Imagine hearing <strong>0xfvhtyuwaxbpq.jpg</strong>
+							</li>
+						</ul>
 					</section>
 				</section>
 				<section>
@@ -235,48 +259,94 @@
 								<div tabindex="0">Clicky 1</div>
 
 								<!-- Custom tab order -->
-								<div tabindex="5">Clicky 1</div>
+								<div tabindex="5">Clicky 2</div>
 
 								<!-- Focusable through scripting but not in tab order.
 								Useful for hiding focusable controls from sighted users
 								and keyboard-only users -->
-								<div tabindex="-1">not Clicky 1</div>
+								<div tabindex="-1">not Clicky 3</div>
 							</body>
 						</code></pre>
-						<a target="blank" href="examples/usability-demos/4-focus/tabindex.html">Open Demo</a>
+						<a target="blank" href="examples/usability-demos/4-focus/tabindex.html">Open Example</a>
 					</section>
 					<section>
-						<h6>Proactive Focus</h6>
-						<pre><code data-trim><body>element.focus()</body></code></pre>
+						<h6>Activelly Setting Focus</h6>
+						<pre><code data-trim><body>element.focus();</body></code></pre>
 						Proactively place focus to create an efficient workflow
+						<a target="blank" href="examples/usability-demos/4-focus/proactive/index.html">Open Example</a>
 					</section>
 					<section>
-						Do not drop focus on the floor
-						<br />
-						<a target="blank" href="examples/usability-demos/drop-focus/index.html">Example</a>
+						<h6>Losing Focus</h6>
+						<h7>don't let it happen</h7>
+						<br /><br />
+						<a target="blank" href="examples/usability-demos/4-focus/dropping/index.html">Open Example</a>
 					</section>
 				</section>
 				<section>
 					<h2>WAI-ARIA</h2>
+					<section>WAI-ARIA addresses accessibility challenges of modern web applications by defining how information about functionality can be provided to assistive technology.</section>
 					<section>
 						<h6>aria-role</h6>
-						<pre><code data-trim><body>element.focus()</body></code></pre>
-						Proactively place focus with to create an efficient workflow
+						<pre><code data-trim>
+							<body>
+								<!-- Landmark Roles -->
+								<div role="banner">...</div>
+								<div role="navigation">...</div>
+								<div role="main">...</div>
+								<!-- Widget Roles -->
+								<div role="alert">...</div>
+								<div role="checkbox">...</div>
+								<!-- Document Structure -->
+								<div role="heading">...</div>
+								<div role="article">...</div>
+							</body>
+						</code></pre>
+						<p>The role attribute defines what's the general type of the object (such as an article, alert, or slider).</p>
 					</section>
 					<section>
-						<h6>aria-labelledby</h6>
-						<pre><code data-trim><body>element.focus()</body></code></pre>
-						Proactively place focus with to create an efficient workflow
+						<h6>aria-label and aria-labelledby</h6>
+						<pre><code data-trim>
+							<h2 id="label_fruit"> Available Fruit </h2>
+							<ul role="listbox" aria-labelledby="label_fruit">
+								<li role="option"> apples </li>
+								<li role="option"> bananas </li>
+								<li role="option"> cantaloupes </li>
+								<li role="option"> dates </li>
+							</ul>
+						</code></pre>
+						Gives assistive technology more information about elements on the page.
+					</section>
+					<section>
+						<h6>aria-live</h6>
+						Notifies the user of updates to parts of the page that are
+						not focused at the moment the update happens.
+					</section>
+					<section>
+						<h6>aria-invalid</h6>
+						Don't indicate important information using color alone
+					</section>
+					<section>
+						<h6>And more...</h6>
+						<div>aria-required</div>
+						<div>aria-hidden</div>
+						<div>aria-activedescendant</div>
+						<div>aria-controls</div>
+						<div>aria-level</div>
+						<div>aria-posinset</div>
+						<div>aria-setsize</div>
 					</section>
 				</section>
 				<section>
 					<h2>Resources</h2>
 					<section>
 						<ul>
-							<li><a href="https://www.w3.org/TR/wai-aria-practices/#aria_ex">Keyboard Recommendations: https://www.w3.org/TR/wai-aria-practices/#aria_ex</a></li>
-							<li><a href="https://www.wuhcag.com/wcag-checklist/">WCAG 2.0 Checklist: https://www.wuhcag.com/wcag-checklist/</a></li>
-							<li><a href="http://wave.webaim.org/">WAVE: http://wave.webaim.org/</a></li>
+							<li><a href="https://www.w3.org/TR/2009/WD-wai-aria-practices-20090224/">WAI-ARIA: Best Practices</a></li>
+							<li><a href="https://www.w3.org/TR/wai-aria-practices/#aria_ex">WAI-ARIA: Recommendations</a></li>
+							<li><a href="https://www.w3.org/TR/wai-aria/roles">WAI-ARIA: Roles</a></li>
 							<li><a href="https://www.w3.org/WAI/perspectives/keyboard.html">WAI Perspectives: Keyboard</a></li>
+							<li><a href="http://accessibility.voxmedia.com/">Voxmedia Accessibility Guide</a></li>
+							<li><a href="http://wave.webaim.org/">WAVE: http://wave.webaim.org/</a></li>
+							<li><a href="https://www.wuhcag.com/wcag-checklist/">WCAG 2.0 Checklist</a></li>
 						</ul>
 					</section>
 				</section>
@@ -285,15 +355,15 @@
 					<section>
 						<ul>
 							<li>Organize in pairs</li>
-							<li>Enable Voiceover (Mac users)</li>
-							<li>Turn off the screen - brightness down</li>
+							<li>Enable Voiceover / Chromevox</li>
+							<li>Turn off the screen - Set brightness to 0</li>
 							<li>
 								Try to accomplish some user journey on the product
 								you work on or on master.liferay.org.es 
 							</li>
 							<li>Take notes whenever you find a pain point</li>
 							<li>
-								Switch positions with your pair
+								Alternate with your pair
 							</li>
 						</ul>
 					</section>

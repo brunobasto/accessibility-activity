@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Modal</title>
+
+	<link rel="stylesheet" href="bootstrap.css">
+
+	<script src="modal.js"></script>
+</head>
+<body>
+	<h1>Modal</h1>
+	<ul class="nav nav-pills nav-stacked">
+		<li><a href="#">Link A</a></li>
+		<li><a href="#">Link B</a></li>
+		<li><a href="#">Link C</a></li>
+		<li><a href="#">Link D</a></li>
+		<li><a href="#">Link E</a></li>
+	</ul>
+	<button type="button" class="btn btn-primary openModal">Open Modal</button>
+	<p id="content">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis quod esse,
+		accusamus officiis fugit, delectus consectetur suscipit repudiandae error
+		nam ex eveniet animi non minima quasi, culpa cupiditate dolorum asperiores.
+	</p>
+	<footer><a href="footer.html" class="">Footer link</a></footer>
+	<div class="modal"></div>
+	<script type="text/javascript">
+		window.modal = new metal.Modal({
+			element: '.modal',
+			header: '<h4 class="modal-title">Modal header</h4>',
+			body: 'One fine body...',
+			footer: '<button type="button" class="btn btn-primary">OK</button>',
+			visible: false
+		});
+
+		document.querySelector('.openModal').addEventListener('click', function() {
+			modal.show();
+		});
+	</script>
+</body>
+</html>

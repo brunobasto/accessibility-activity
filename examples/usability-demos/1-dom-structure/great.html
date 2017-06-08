@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
-<body>
+<body aria-labelledby="bodytitle">
+  <h1 style="display:none;">DOM Structure Example</h1>
   <nav aria-labelledby="navlabel" tabindex="0">
     <h2 id="navlabel">Navigation Menu</h2>
     <ul role="menu" aria-labelledby="navheading">
@@ -17,8 +18,7 @@
       <li><a role="menuitem" href="#">Nav 4</a></li>
     </ul>
   </nav>
-  <div role="main" aria-labelledby="contentlabel">
-    <h2 id="contentlabel">Articles</h2>
+  <div role="main" aria-labelledby="title">
     <h1 id="title" aria-label="Article Title">This is the title</h1>
     <p id="content" aria-label="Article Content">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis quod esse,

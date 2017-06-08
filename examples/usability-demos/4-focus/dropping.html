@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <!-- Natural tab order. It does not change the tab order,
+        but places the element in the logical navigation flow. -->
+        <div tabindex="0">Clicky 1</div>
+        
+        <!-- Custom tab order -->
+        <div tabindex="5">Clicky 1</div>
+        
+        <!-- Focusable through scripting but not in tab order.
+        Useful for hiding focusable controls from sighted users
+        and keyboard-only users -->
+        <div tabindex="-1">not Clicky 1</div>
+    </body>
+</html>

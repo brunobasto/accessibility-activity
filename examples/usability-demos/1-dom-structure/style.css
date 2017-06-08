@@ -16,7 +16,7 @@
     padding: 0;
 }
 
-nav {
+nav, .nav {
     left: 10px;
     margin: 0;
     padding: 0;
@@ -30,7 +30,13 @@ nav ul {
     padding: 0;
 }
 
-nav li {
+nav li, .menuitem {
     list-style: none;
     display: inline-block;
+}
+
+.menuitem {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
 }

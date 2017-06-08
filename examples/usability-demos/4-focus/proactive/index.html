@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Demo: Metal Clay Dropdown</title>
+
+		<link rel="stylesheet" href="atlas-font-awesome.css">
+		<link rel="stylesheet" href="all.css">
+		<script src="metal-clay-dropdown-min.js"></script>
+	</head>
+	<body>
+		<h1>Metal Clay Dropdown</h1>
+
+		<button class="btn btn-primary toggler">Toggler</button>
+
+		<button class="btn">Exit</button>
+
+		<script type="text/javascript">
+			delegatedDropDown = new metal.MetalClayDropdown({
+				alignElementSelector: '.toggler',
+				dropdownItems: [{
+					elementClasses: 'active',
+					href: '#1',
+					label: 'Item 1'
+				}, {
+					component: 'divider',
+				}, {
+					elementClasses: 'disabled',
+					href: '#1',
+					label: 'Item 2'
+				}],
+				dropdownToggle: {
+					elementClasses: 'btn btn-link',
+					href: '#1',
+					icon: {
+						spritemap: '../node_modules/clay/build/images/icons/icons.svg',
+						symbol: 'caret-bottom'
+					},
+					label: 'Link'
+				}
+			});
+		</script>
+	</body>
+</html>
