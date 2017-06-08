@@ -290,13 +290,13 @@
 					<section>
 						<h6>aria-label and aria-labelledby</h6>
 						<pre><code data-trim>
-							<body>
-								<div role="main" aria-labelledby="mainlabel">
-									<h1 id="mainlabel">Content Title</h1>
-								</div>
-
-								<button aria-label="Submit your answers">Submit</button>
-							</body>
+							<h2 id="label_fruit"> Available Fruit </h2>
+							<ul role="listbox" aria-labelledby="label_fruit">
+								<li role="option"> apples </li>
+								<li role="option"> bananas </li>
+								<li role="option"> cantaloupes </li>
+								<li role="option"> dates </li>
+							</ul>
 						</code></pre>
 						Gives screen readers more information about elements on the page.
 					</section>
